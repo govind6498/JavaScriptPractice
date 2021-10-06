@@ -1,9 +1,18 @@
-let head=0;
-let tail=1;
-checkCoin = Math.floor(Math.random()*10)%2;
-if(checkCoin==head){
-    console.log("Heads")
+let headCount = 0;
+let tailCount = 0;
+
+while (headCount != 11 && tailCount != 11) {
+    let coin = Math.floor(Math.random() * 2);
+    if (coin == 0) {
+        headCount++;
+    }
+    else {
+        tailCount++;
+    }
 }
-else{
-    console.log("Tails");
+if (headCount > tailCount) {
+    console.log("Head Wins!\nHead Count : " + headCount + "\nTails Count : "+ tailCount);
+}
+else {
+    console.log("Tail Wins!\nHead Count : " + headCount + "\nTails Count : "+ tailCount);
 }
